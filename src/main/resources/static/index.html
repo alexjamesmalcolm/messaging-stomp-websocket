@@ -9,6 +9,26 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <form>
+            <label for="connect">WebSocket connection:</label>
+            <button id="connect" type="submit">Connect</button>
+            <button id="disconnect" type="submit" disabled="disabled">Disconnect</button>
+        </form>
+        <form>
+            <label for="name">What is your name?</label>
+            <input type="text" id="name" placeholder="Your name here..." />
+            <button id="send" type="submit">Send it</button>
+        </form>
+        <table id="conversation">
+            <thead>
+                <tr>
+                    <th>Greetings</th>
+                </tr>
+            </thead>
+            <tbody id="greetings">
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
