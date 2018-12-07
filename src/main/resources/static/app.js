@@ -10,12 +10,17 @@ function $(selector, all) {
 }
 
 function setConnected(connected) {
-    $("#connect").setAttribute("disabled", connected);
-    $("#disconnect").setAttribute("disabled", !connected);
+    const connect = $("#connect");
+    const disconnect = $("#disconnect");
+    const conversation = $("#conversation");
     if(connected) {
-        $("#conversation").classList.remove("hide");
+        connect.setAttribute("disabled", "true");
+        disconnect.removeAttribute("disabled");
+        conversation.classList.remove("hide");
     } else {
-        $("#conversation").classList.add("hide");
+        connect.removeAttribute("disabled");
+        disconnect.setAttribute("disabled", "true");
+        conversation.classList.add("hide");
     }
     $("#greetings").innerHTML = "";
 }
