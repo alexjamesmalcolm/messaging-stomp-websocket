@@ -4,6 +4,8 @@ public class Greeting {
 
     private String content;
 
+    Greeting() {}
+
     public Greeting(String content) {
         this.content = content;
     }
